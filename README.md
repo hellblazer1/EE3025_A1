@@ -1,1 +1,1 @@
-# EE3025_A1
+As a part of course EE3025
