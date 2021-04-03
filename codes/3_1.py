@@ -35,3 +35,4 @@ plt.ylabel('$|H(j\omega)|$')
 #If using termux
 plt.savefig('../figs/3_1.pdf')
 plt.savefig('../figs/3_1.eps')
+subprocess.run(shlex.split("termux-open ../figs/3_1.pdf"))

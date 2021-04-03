@@ -32,5 +32,5 @@ fig.tight_layout()
 
 plt.savefig('../figs/2_2.eps')
 plt.savefig('../figs/2_2.pdf')
-
+subprocess.run(shlex.split("termux-open ../figs/2.2.pdf"))
 

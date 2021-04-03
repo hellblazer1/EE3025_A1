@@ -15,3 +15,4 @@ plt.title("Time domain impulse response from the difference equation")
 #if using termux
 plt.savefig('../figs/4_1.eps')
 plt.savefig('../figs/4_1.pdf')
+subprocess.run(shlex.split("termux-open ../figs/4_1.pdf"))

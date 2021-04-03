@@ -12,7 +12,7 @@ import shlex
 
 
 x,fs = sf.read('../data/Sound_Noise.wav')
-y = np.zeros(np.len(x))
+y = np.zeros(len(x))
 samp_freq = fs
 order = 4
 cutoff_freq = 4000.0
@@ -25,7 +25,7 @@ h[1] = (1/a[0]) * (b[1]-a[1]*h[0])
 h[2] = (1/a[0]) * (b[2]-a[2]*h[0]-a[1]*h[1])
 h[3] = (1/a[0]) * (b[3]-a[1]*h[2]-a[3]*h[0]-a[2]*h[1])
 h[4] = (1/a[0]) * (b[4]-a[1]*h[3]-a[2]*h[2]-a[4]*h[0]-a[3]*h[1])
-for i in range(5,l):
+for i in range(5,len(x)):
 	h[i] = (1/a[0])*(-a[1]*h[i-1]-a[2]*h[i-2]-a[3]*h[i-3]-a[4]*h[i-4])
 
 
@@ -49,3 +49,4 @@ plt.ylabel('y(n)')
 #If using termux
 plt.savefig('../figs/4_3.pdf')
 plt.savefig('../figs/4_3.eps')
+subprocess.run(shlex.split("termux-open ../figs/4_3.pdf"))

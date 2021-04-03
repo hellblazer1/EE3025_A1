@@ -16,4 +16,4 @@ plt.title("y(n) obtained through performing ifft(fft(Y))")
 #if using termux
 plt.savefig('../figs/5_2.eps')
 plt.savefig('../figs/5_2.pdf')
-
+subprocess.run(shlex.split("termux-open ../figs/5_2.pdf"))
